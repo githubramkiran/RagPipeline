@@ -131,7 +131,7 @@ DOCUMENT3 = Document(metadata={'source': 'https://www.geeksforgeeks.org/', 'titl
 documents = [DOCUMENT1.page_content, DOCUMENT2.page_content,DOCUMENT3.page_content]
 
 
-for d in Webdocslist:
+for d in Webdocslist[0].page_content:
     documents.append(d)
 for d in pdfdocslist[0].page_content:
     documents.append(d)
@@ -341,6 +341,7 @@ if __name__ == "__main__":
 
 
  uvicorn.run(app, host="localhost", port=8000)
+
 
 
 
