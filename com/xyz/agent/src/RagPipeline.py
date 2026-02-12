@@ -81,7 +81,7 @@ Webdocslist=webContentLoader.load_content()
 #pdf
 from langchain_community.document_loaders import PyPDFLoader
 
-file_path = './samplepdf.pdf'
+file_path = './com/xyz/agent/src/samplepdf.pdf'
 loader = PyPDFLoader(file_path)
 pdfdocslist = loader.load()
 print("pdf content",pdfdocslist[0].page_content)
@@ -341,3 +341,4 @@ if __name__ == "__main__":
 
 
  uvicorn.run(app, host="localhost", port=8000)
+
