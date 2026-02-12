@@ -81,7 +81,7 @@ Webdocslist=webContentLoader.load_content()
 #pdf
 from langchain_community.document_loaders import PyPDFLoader
 
-file_path = 'D:\\pythonprojects\\PythonProject\\RagPipeline\\com\\xyz\\agent\\src\\samplepdf.pdf'
+file_path = './samplepdf.pdf'
 loader = PyPDFLoader(file_path)
 pdfdocslist = loader.load()
 print("pdf content",pdfdocslist[0].page_content)
@@ -338,5 +338,6 @@ async def chat_endpoint(request: ChatRequest):
 
 if __name__ == "__main__":
  import uvicorn
+
 
  uvicorn.run(app, host="localhost", port=8000)
