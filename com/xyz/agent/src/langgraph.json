@@ -2,7 +2,7 @@
   "$schema": "https://langgra.ph/schema.json",
   "dependencies": ["."],
   "graphs": {
-    "agent": "./com/xyz/agent/src/RagPipeline.py:graph"
+    "agent": "./com/xyz/agent/src/RagPipelinetest.py:graph"
   },
   "env": ".env"
 }
