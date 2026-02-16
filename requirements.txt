@@ -1,1 +1,13 @@
+streamlit
+langchain
+langchain-core
+langchain-community
+langgraph
+pypdf
+fastapi
+uvicorn
+langchain-google-genai
+chromadb
+python-dotenv
+uv
 
