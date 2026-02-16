@@ -40,8 +40,7 @@ if not API_BASE_URL:
 
 def submit_query(query):
     try:
-        responetextbox=st.empty()
-        response = requests.post(
+       response = requests.post(
             f"{API_BASE_URL}/chat",
             json={"message": query,"thread_id":"thread_id"},
             timeout=10,  # Add timeout to prevent hanging
@@ -49,8 +48,7 @@ def submit_query(query):
         )
         response.raise_for_status()  # Raise error for bad status codes
         print(response.json())
-        responetextbox=st.text_area("Response:",response.json())
-        st.write("Response:",response.json())
+        st.text_area("Response:",response.json())        
         return response.json()
     except requests.exceptions.RequestException as e:
         logger.error(f"Error submitting query: {e}")
@@ -98,6 +96,7 @@ This dashboard was developed using streamlit,fastapi,langchain,langgraph
 """
 
 )
+
 
 
 
