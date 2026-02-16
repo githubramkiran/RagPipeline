@@ -27,7 +27,7 @@ footer {visibility: hidden;}
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # Add title
-st.title("📊 ChatBot")
+st.title("📊 SearchEngine ChatBot")
 
 # API endpoint configuration
 #API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:4000")
@@ -73,7 +73,7 @@ if st.button("Submit"):
 
             # Submit the query
             result = submit_query(query)
-
+            status_placeholder = st.empty()
         except Exception as e:
             st.error("An error occurred. Please try again.")
             logger.error(f"Error: {str(e)}")
@@ -84,10 +84,7 @@ if st.button("Submit"):
 st.sidebar.header("Example Queries")
 st.sidebar.markdown(
     """
-- Show me the cost trends by model over the last week
-- Compare usage patterns across the top 5 models
-- List the top 5 most active users by request count in the last 30 days
-- Show token usage by model for the past month
+- Ask any question?
 """
 )
 
@@ -95,12 +92,8 @@ st.sidebar.markdown(
 st.sidebar.header("About")
 st.sidebar.markdown(
     """
-This dashboard provides a user-friendly interface to the SQL and Plot Workflow API.
-It allows you to:
-- Submit natural language queries
-- Track query processing in real-time
-- View generated visualizations
-- Download results
+This dashboard was developed using streamlit,fastapi,langchain,langgraph
 """
 
 )
+
