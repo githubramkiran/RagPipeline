@@ -40,7 +40,7 @@ if not API_BASE_URL:
 
 def submit_query(query):
     try:
-       response = requests.post(
+        response = requests.post(
             f"{API_BASE_URL}/chat",
             json={"message": query,"thread_id":"thread_id"},
             timeout=10,  # Add timeout to prevent hanging
@@ -96,6 +96,7 @@ This dashboard was developed using streamlit,fastapi,langchain,langgraph
 """
 
 )
+
 
 
 
