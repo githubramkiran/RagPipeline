@@ -30,7 +30,8 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 st.title("📊 ChatBot")
 
 # API endpoint configuration
-API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:4000")
+#API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:4000")
+API_BASE_URL = os.getenv("API_BASE_URL")
 print(API_BASE_URL)
 if not API_BASE_URL:
     st.error("Error: API_BASE_URL environment variable is not set. Please set it to your API endpoint URL.")
@@ -101,4 +102,5 @@ It allows you to:
 - View generated visualizations
 - Download results
 """
+
 )
