@@ -43,7 +43,7 @@ def submit_query(query):
         response = requests.post(
             f"{API_BASE_URL}/chat",
             json={"message": query,"thread_id":"thread_id"},
-            timeout=10,  # Add timeout to prevent hanging
+            #timeout=10,  # Add timeout to prevent hanging
             headers={"accept": "application/json","Content-Type": "application/json"}
         )
         response.raise_for_status()  # Raise error for bad status codes
@@ -96,6 +96,7 @@ This dashboard was developed using streamlit,fastapi,langchain,langgraph
 """
 
 )
+
 
 
 
